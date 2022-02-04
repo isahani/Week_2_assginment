@@ -53,7 +53,7 @@ public class Maze {
     public String lootCurrentRoom() {
         //code
         if (currrentroom instanceof LootableRoom) {
-           return  ((LootableRoom) currrentroom).loot(player);
+           return ((LootableRoom) currrentroom).loot(player);
         }
         else {
             return currrentroom + " is not lootable";

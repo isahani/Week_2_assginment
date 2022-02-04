@@ -14,18 +14,20 @@ public class Main {
             System.out.println(maze.currrentroom.getExits());
             String direction = scanner.nextLine();
             if (direction.charAt(0) == 'l'){
-                maze.lootCurrentRoom();
+                System.out.println(maze.lootCurrentRoom());
             }
             else if (direction.charAt(0) == 'x'){
-                maze.exitCurrentRoom();
+                System.out.println(maze.exitCurrentRoom());
             }
             else if (direction.charAt(0) == 'i'){
-                maze.interactWithCurrentRoom();
+                System.out.println(maze.interactWithCurrentRoom());
             }
             else {
                 maze.move(direction.charAt(0));
             }
         } while (!maze.isFinished());
+
+        System.out.println("GAME OVER \n Your Score is: " + maze.player.getScore());
         /*
         maze.interactWithCurrentRoom();
         System.out.println(maze.getPlayerInventory());
